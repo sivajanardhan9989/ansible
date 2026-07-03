@@ -8,12 +8,18 @@
       ansible.builtin.package:
         name: nginx
         state: present
+    - name: debug the message
+      debug:
+        msg: " nginx is installed successfully"   
         
     - name:  start the service
       ansible.builtin.service:
         name: nginx
         state: started
         enabled: yes ### YamlMime:Achievements
+    - name: debug the start message
+      debug:
+        msg: " nginx is started successfully"    
         
         
 
