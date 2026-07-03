@@ -1,0 +1,10 @@
+- name: "demo on var files"
+  hosts: localhost
+  become: yes
+  vars_files:
+    - name: course.yaml
+  tasks:
+    - name: debug the message
+      debug:
+        msg: "The course name is {{ COURSE }} and the trainer name is {{ TRAINER }} and the duration of the course is {{ DURATION }}"
+        
