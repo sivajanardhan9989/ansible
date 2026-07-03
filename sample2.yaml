@@ -1,0 +1,7 @@
+- name: learning debug 
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: demo on debug 
+      debug:
+        msg: "This is a debug message"
