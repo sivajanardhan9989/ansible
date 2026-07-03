@@ -1,6 +1,7 @@
 - name: "demo on tasks level variables"
-  connectins: local
-  become: 
+  hosts: localhost
+  connection: local
+  become: yes
   vars:
     COURSE: "Ansible"
     TRAINER: "sivakumar"
