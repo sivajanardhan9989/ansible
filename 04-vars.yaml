@@ -1,0 +1,11 @@
+- name: variable demo
+  hosts: localhost
+  become: yes
+  vars:
+    name: "siva"
+    age: 28
+    sex: "male"
+  tasks:
+    - name: debug the message
+      debug:
+        msg: "My name is {{ name }} and my age is {{ age }} and my sex is {{ sex }}"  
