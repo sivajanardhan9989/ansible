@@ -2,16 +2,22 @@
   hosts: localhost
   tasks:
     - name: ping the server 
+      debug:
+        msg: "pinging the server"
       ping: # ansible.builtin.ping
     - name:  install nginx 
       ansible.builtin.package:
         name: nginx
         state: present
+        debug:
+        msg: "installing nginx"
     - name: start nginx service 
       ansible.builtin.service:
         name: nginx
         state: started 
         enabled: yes
-          
+        debug:
+        msg: "starting nginx service"
+
 
   
