@@ -1,0 +1,11 @@
+- name: "demo on tasks level variables"
+  connectins: local
+  become: 
+  vars:
+    COURSE: "Ansible"
+    TRAINER: "sivakumar"
+    DURATION: "150HRS"
+  tasks:
+  - name: print information
+    debug:
+      msg: "The course name is {{ COURSE }} and the trainer name is {{ TRAINER }} and the duration of the course is {{ DURATION }}"
