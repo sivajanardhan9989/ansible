@@ -9,3 +9,10 @@
   - name: print the output
     debug:
       msg: "{{ users_output }}"  
+
+  - name: list the files in /tmp directory
+    shell: ls -l /tmp
+    register: tmp_output    
+  - name: print the tmp output
+    debug:
+      msg: "{{ tmp_output }}"  
