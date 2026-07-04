@@ -7,6 +7,24 @@
       name: Ansible
       project: roboshop
       environment: dev
+      full_name: Siva Janardhan Reddy
+      ip_address: 178.90.78.17
+
+    taglist: [
+       {
+            "key": "name",
+            "value": "Ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "environment",
+            "value": "dev"
+        }
+
+    ]
 
 
   tasks:
@@ -16,3 +34,8 @@
   - name: show tagmap
     debug:    
       msg:  tagmap is {{ tagMap | dict2items }}
+
+  - name: show taglist
+    debug:    
+      msg:  taglist is {{ taglist | items2dict }}    
+
