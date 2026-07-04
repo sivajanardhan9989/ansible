@@ -6,4 +6,4 @@
   tasks:
   - name: show topics
     debug:  
-    msg:  topics are {{ topics | split(",")}}
+      msg:  topics are {{ topics | split(",")}}
