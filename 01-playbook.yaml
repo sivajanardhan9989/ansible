@@ -1,5 +1,5 @@
 - name: ping the server 
-  hosts: localhost
+  hosts: frontend
   become: yes
   tasks:
     - name: ping the server
@@ -20,6 +20,8 @@
     - name: debug the start message
       debug:
         msg: " nginx is started successfully"    
+
+
         
         
 
