@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    given_number: 5
+    given_number: 6
   tasks:
    - name: check even or add 
      debug:
