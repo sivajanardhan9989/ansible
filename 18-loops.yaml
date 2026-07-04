@@ -6,6 +6,7 @@
     package:
       name:  "{{ item.name }}"
       state: "{{ item.state }}"
+  - name: debug the message    
     debug:
       msg: "installing {{ item }}"
     loop:
