@@ -1,0 +1,7 @@
+- name: demo on inventory variables
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: debug the message
+      debug:
+        msg: "The course name is {{ COURSE }} and the trainer name is {{ TRAINER }} and the duration of the course is {{ DURATION }}"
