@@ -3,6 +3,9 @@
   connection: local
   tasks:
   - name: install packages
+    package:
+      name:  "{{ item.name }}"
+      state: "{{ item.state }}"
     debug:
       msg: "installing {{ item }}"
     loop:
