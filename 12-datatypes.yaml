@@ -21,7 +21,7 @@
     debug:
       msg: |
         name: {{ course }}
-        duration: {{ duration_in_hrs }}
+        duration: {{ duration }}
         is_active: {{ is_active }}
         topics: {{ topics }}
         course_details: {{ course_details }}      
