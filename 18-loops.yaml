@@ -1,4 +1,4 @@
-- names: install packages
+- name: install packages
   hosts: localhost
   connection: local
   tasks:
