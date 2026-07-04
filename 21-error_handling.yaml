@@ -5,13 +5,13 @@
   tasks:
   - name: check roboshop user exist or not
     command: id roboshop
-    register: roboshop_user
+    register: user_output
     ignore_errors: true
-  - name: print the output
-    debug:
-      msg: "{{ roboshop_user }}"
 
-  - name: create user roboshop
-    user:
-      command: useradd roboshop
-      when: roboshop_user.rc != 0
+  - name: print user_output
+    debug:
+      msg: "{{ user_output }}"
+
+  - name: create user
+    command: useradd roboshop
+    when: user_output.rc != 0
