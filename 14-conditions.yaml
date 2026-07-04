@@ -1,0 +1,10 @@
+- name : to check even or add 
+  hosts: localhost
+  connection: local
+  vars:
+    given_number: 5
+  tasks:
+   - name: check even or add 
+     debug:
+        msg: "The given number is {{ given_number }}"
+     when: given_number % 2 == 0
