@@ -28,14 +28,28 @@
 
 
   tasks:
-  - name: show topics
+  - name: convert map to list
     debug:  
       msg:  topics are {{ topics | split(",")}} 
-  - name: show tagmap
+  - name: convert list to map
     debug:    
       msg:  tagmap is {{ tagMap | dict2items }}
 
-  - name: show taglist
+  - name: convert list to dict
     debug:    
-      msg:  taglist is {{ taglist | items2dict }}    
+      msg:  taglist is {{ taglist | items2dict }}   
+
+  - name: convert to uppercase
+    debug:
+      msg: "{{ full_name | upper }}"
+
+  - name: convert to lowercase
+    debug:
+      msg: "{{ full_name | lower }}"
+
+  - name: check ipv4 address
+    debug:
+      msg: "{{ ip_address | ansible.utils.ipv4 }}"    
+
+
 
