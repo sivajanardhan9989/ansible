@@ -7,8 +7,8 @@
       name: Ansible
       project: roboshop
       environment: dev
-      full_name: Siva Janardhan Reddy
-      ip_address: 178.90.78.17
+    full_name: Siva Janardhan Reddy
+    ip_address: 178.90.78.17
 
     taglist: [
        {
