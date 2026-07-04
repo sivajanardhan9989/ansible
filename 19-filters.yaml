@@ -3,7 +3,16 @@
   connection: local
   vars:
     topics: linux, shell, ansible, terraform
+    tagMap:
+      name: Ansible
+      project: roboshop
+      environment: dev
+
+
   tasks:
   - name: show topics
     debug:  
-      msg:  topics are {{ topics | split(",")}}
+      msg:  topics are {{ topics | split(",")}} 
+  - name: show tagmap
+    debug:    
+      msg:  tagmap is {{ tagMap | dict2items }}
