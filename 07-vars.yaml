@@ -1,0 +1,14 @@
+- name: demo on prompt
+  hosts: localhost
+  become: yes ### YamlMime:Achievements
+  vars_prompt:
+    - name: "username"
+      prompt:  "enter the username"
+      private: false
+    - name: "password"
+      prompt:  "enter the password"
+      private: true
+  tasks:
+    - name: debug the message
+      debug:
+        msg: "The username is {{ username }} and the password is {{ password }}"    
