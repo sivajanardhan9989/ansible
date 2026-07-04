@@ -1,0 +1,27 @@
+- name : course 
+  hosts: local 
+  connection: local
+  vars:
+    course: "DevSecOps with AIOps" # String
+    duration: 150 # Integer
+    is_active: true # Boolean
+    topics: # List
+      - Ansible
+      - Jenkins
+      - Docker
+      - Kubernetes
+      - github actions 
+      - Prometheus
+    course_details: # map
+      trainer: "Sivakumar"
+      location: "Bangalore"
+      start_date: "2024-06-01"
+  tasks:
+  - name: print information
+    debug:
+      msg: |
+        name: {{ course }}
+        duration: {{ duration_in_hrs }}
+        is_active: {{ is_active }}
+        topics: {{ topics }}
+        course_details: {{ course_details }}      
