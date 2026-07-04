@@ -1,0 +1,10 @@
+- name :  check number of live sessions 
+  hosts: localhost
+  connection: local
+  vars:
+    live_sessions: 6
+  tasks:
+  - name: check number of live sessions 
+    debug: 
+      msg: "Hello {{ live_sessions }}"
+    when: live_sessions > 2  
