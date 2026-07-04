@@ -1,0 +1,13 @@
+- name : learning loops
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: print names
+    debug:
+      msg: "hello {{ item }}"
+    loop:
+      - siva 
+      - raju 
+      - ramesh 
+    
+  
